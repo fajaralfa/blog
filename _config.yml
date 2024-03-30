@@ -102,6 +102,6 @@ theme: landscape
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@gitlab.com/fajaralfa/site
+  repo: git@gitlab.com:fajaralfa/site
   branch: main
   message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
