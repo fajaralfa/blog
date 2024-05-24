@@ -1,0 +1,8 @@
+<%- partial('partial/header') %>
+    <% site.posts.forEach(function(item){ %>
+        <a href="/<%- item.path %>">
+            <h1><%- item.title %></h1>
+            <p><%- item.excerpt %></p>
+        </a>
+    <% }); %>
+<%- partial('partial/footer') %>

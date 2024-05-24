@@ -1,0 +1,41 @@
+body {
+    font-family: sans-serif;
+    max-width: 40rem;
+    margin: auto;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+}
+
+footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* utils */
+.text-center {
+    text-align: center;
+}
+
+.size-icon {
+    height: 1.5rem;
+}
+
+.space-x-icon * {
+    margin-inline: 0.2rem;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.pb-1 {
+    padding-bottom: 1rem;
+}

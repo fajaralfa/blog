@@ -1,0 +1,9 @@
+<header class="text-center">
+    <h1 class="uppercase"><%= page.title %></h1>
+    <hr>
+</header>
+<p><%- page.content %></p>
+<div>Dibuat : <%- date(page.date, 'MMMM Do YYYY, hh:mm:ss') %></div>
+<div>Terakhir diubah : <%- date(page.date, 'MMMM Do YYYY, hh:mm:ss') %></div>
+<div><a href="/">Ke Halaman Awal</a></div>
+<%- partial('partial/footer') %>
