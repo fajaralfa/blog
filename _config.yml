@@ -29,6 +29,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - "ads.txt"
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -96,12 +97,12 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: paper
+theme: ascent
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@gitlab.com:fajaralfa/site
+  repo: git@github.com:fajaralfa/site
   branch: main
   message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
