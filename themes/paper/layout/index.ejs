@@ -1,8 +1,27 @@
-<%- partial('partial/header') %>
-    <% site.posts.forEach(function(item){ %>
-        <a href="/<%- item.path %>">
-            <h1><%- item.title %></h1>
-            <p><%- item.excerpt %></p>
-        </a>
-    <% }); %>
-<%- partial('partial/footer') %>
+<% page.posts.each(function (item) { %>
+<section id="<%= item.layout %>-<%= item.slug %>" style="padding-bottom: 1.5rem;">
+    <div id="section-header">
+        <a href="<%= item.path %>"><%= item.date.format(config.date_format) %></a>
+        <h1><a href="<%= item.path %>"><%= item.title %></a></h1>
+    </div>
+    <div id="section-excerpt">
+        <%if (item.excerpt) { %>
+            <%- item.excerpt %>
+        <% } else { %>
+            <p>Tidak kilasan artikel</p>
+        <% } %>
+    </div>
+    <div id="section-footer">
+        <a href="<%= item.path %>">Baca Selengkapnya</a>
+    </div>
+</section>
+<% }) %>
+
+<nav>
+    <% if (page.prev){ %>
+        <a href="<%- url_for(page.prev_link) %>"><%= __('prev') %></a>
+    <% } %>
+    <% if (page.next){ %>
+        <a href="<%- url_for(page.next_link) %>"><%= __('next') %></a>
+    <% } %>
+</nav>

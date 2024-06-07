@@ -1,0 +1,63 @@
+.text-center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.h-1 {
+    height: 1rem;
+}
+
+.p-1 {
+    padding: 1rem;
+}
+
+.p-2 {
+    padding: 2rem;
+}
+
+.gap-1 {
+    gap: 1rem;
+}
+
+.gap-2 {
+    gap: 2rem;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.potrait {
+    max-width: var(--potrait);
+}
+
+.font-xl {
+    font-size: x-large;
+}
+
+.font-l {
+    font-size: large;
+}
+
+.font-lr {
+    font-size: larger;
+}
+
+.shadow {
+    box-shadow: 0.1rem 0.07rem 0.1rem;
+}

@@ -1,0 +1,21 @@
+.highlight {
+    background: rgb(230, 230, 230);
+    overflow: scroll;
+    margin-inline: 0.5rem;
+}
+
+pre {
+    overflow: scroll;
+}
+
+.highlight figcaption {
+    font-style: italic;
+}
+
+.highlight figcaption::before {
+    content: '- ';
+}
+
+.highlight .line.marked {
+    background: rgb(185, 185, 255);
+}

@@ -2,8 +2,17 @@
     <h1 class="uppercase"><%= page.title %></h1>
     <hr>
 </header>
+<div class="" style="font-size: small;">
+<%- date(page.date, 'Do MMMM YYYY') %>
+</div>
 <p><%- page.content %></p>
-<div>Dibuat : <%- date(page.date, 'MMMM Do YYYY, hh:mm:ss') %></div>
-<div>Terakhir diubah : <%- date(page.date, 'MMMM Do YYYY, hh:mm:ss') %></div>
-<div><a href="/">Ke Halaman Awal</a></div>
-<%- partial('partial/footer') %>
+<% if (page.prev) { %>
+    <div>
+        <a href="<%= url_for(page.prev.path) %>">Sebelumnya: <%= page.prev.title %></a>
+    </div>
+<% } %>
+<% if (page.next) { %>
+    <div>
+        <a href="<%= url_for(page.next.path) %>">Selanjutnya: <%= page.next.title %></a>
+    </div>
+<% } %>

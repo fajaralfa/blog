@@ -2,11 +2,30 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- css('css/var.css') %>
+    <%- css('css/base.css') %>
+    <%- css('css/utilities.css') %>
     <%- css('css/style.css') %>
+    <%- css('css/syntax.css') %>
 </head>
 
 <body>
-    <%- body %>
+    <div class="potrait m-auto">
+        <nav class="flex p-1 justify-center gap-2 font-xl">
+            <span><a href="<%= url_for('/') %>">Home</a></span>
+            <span><a href="<%= url_for('archives') %>">Archives</a></span>
+            <span><a href="<%= url_for('about') %>">About</a></span>
+        </nav>
+
+        <div class="potrait p-1">
+            <%- body %>
+        </div>
+
+        <footer class="p-2 text-center">
+            &copy; fajaralfa
+        </footer>
+    </div>
 </body>
 
 </html>
