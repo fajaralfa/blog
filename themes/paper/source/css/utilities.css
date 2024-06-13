@@ -42,8 +42,9 @@
     margin: auto;
 }
 
-.potrait {
-    max-width: var(--potrait);
+.container {
+    max-width: var(--container);
+    margin-inline: auto;
 }
 
 .font-xl {
