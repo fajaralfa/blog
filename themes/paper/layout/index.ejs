@@ -1,10 +1,10 @@
 <% page.posts.each(function (item) { %>
 <section id="<%= item.layout %>-<%= item.slug %>" style="padding-bottom: 1.5rem;">
     <div id="section-header">
-        <a href="<%= item.path %>"><%= item.date.format(config.date_format) %></a>
-        <h1><a href="<%= item.path %>"><%= item.title %></a></h1>
+        <a href="<%= item.path %>" class="text-xs"><%= item.date.format(config.date_format) %></a>
+        <h1><a href="<%= item.path %>" class="font-bold text-blue-600"><%= item.title %></a></h1>
     </div>
-    <div id="section-excerpt">
+    <div id="section-excerpt" class="text-sm">
         <%if (item.excerpt) { %>
             <%- item.excerpt %>
         <% } else { %>
@@ -12,7 +12,7 @@
         <% } %>
     </div>
     <div id="section-footer">
-        <a href="<%= item.path %>">Baca Selengkapnya</a>
+        <a href="<%= item.path %>" class="text-xs text-blue-600">Baca Selengkapnya</a>
     </div>
 </section>
 <% }) %>

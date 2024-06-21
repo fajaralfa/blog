@@ -1,18 +1,17 @@
 <header class="text-center">
-    <h1 class="uppercase"><%= page.title %></h1>
+    <h1 class="uppercase text-2xl font-bold"><%= page.title %></h1>
     <hr>
 </header>
-<div class="" style="font-size: small;">
+<div class="text-xs opacity-75">
 <%- date(page.date, 'Do MMMM YYYY') %>
 </div>
-<p><%- page.content %></p>
+<article class="pt-2"><%- page.content %></article>
+
+<div class="pt-10 class flex flex-col gap-1">
 <% if (page.prev) { %>
-    <div>
-        <a href="<%= url_for(page.prev.path) %>">Sebelumnya: <%= page.prev.title %></a>
-    </div>
+    <a href="<%= url_for(page.prev.path) %>">Sebelumnya: <%= page.prev.title %></a>
 <% } %>
 <% if (page.next) { %>
-    <div>
-        <a href="<%= url_for(page.next.path) %>">Selanjutnya: <%= page.next.title %></a>
-    </div>
+    <a href="<%= url_for(page.next.path) %>">Selanjutnya: <%= page.next.title %></a>
 <% } %>
+</div>

@@ -50,7 +50,7 @@ highlight:
   auto_detect: false
   tab_replace: ''
   wrap: true
-  hljs: false
+  hljs: true
 prismjs:
   preprocess: true
   line_number: true
@@ -93,6 +93,7 @@ pagination_dir: page
 include:
 exclude:
 ignore:
+  "/themes/source/css/input.css"
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
