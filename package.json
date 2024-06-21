@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build:css": "bunx tailwindcss -i themes/paper/source/css/_input.css -o themes/paper/source/css/style.css -c themes/paper/tailwind.config.js",
+    "build:css": "tailwindcss -i themes/paper/source/css/_input.css -o themes/paper/source/css/style.css -c themes/paper/tailwind.config.js",
     "build": "npm run build:css && hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
