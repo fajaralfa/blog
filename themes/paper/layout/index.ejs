@@ -1,18 +1,17 @@
 <% page.posts.each(function (item) { %>
-<section id="<%= item.layout %>-<%= item.slug %>" style="padding-bottom: 1.5rem;">
+<section id="<%= item.layout %>-<%= item.slug %>" class="mb-5">
     <div id="section-header">
-        <a href="<%= item.path %>" class="text-xs"><%= item.date.format(config.date_format) %></a>
-        <h1><a href="<%= item.path %>" class="font-bold text-blue-600"><%= item.title %></a></h1>
+        <a href="<%= item.path %>" class="text-xs block"><%= item.date.format(config.date_format) %></a>
+        <a href="<%= item.path %>" class="font-bold text-blue-600 block"><%= item.title %></a>
     </div>
     <div id="section-excerpt" class="text-sm">
         <%if (item.excerpt) { %>
             <%- item.excerpt %>
-        <% } else { %>
-            <p>Tidak kilasan artikel</p>
+            <a href="<%= item.path %>" class="text-blue-600">Baca Selengkapnya</a>
+        <% } else if (item.content) { %>
+            <%- excerpt_gen(item.content) %>
+            <a href="<%= item.path %>" class="text-blue-600">Baca Selengkapnya</a>
         <% } %>
-    </div>
-    <div id="section-footer">
-        <a href="<%= item.path %>" class="text-xs text-blue-600">Baca Selengkapnya</a>
     </div>
 </section>
 <% }) %>
