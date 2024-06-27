@@ -19,6 +19,10 @@ h6 {
     @apply font-bold py-2;
 }
 
+h1 {
+    @apply text-3xl;
+}
+
 h2 {
     @apply text-2xl;
 }
