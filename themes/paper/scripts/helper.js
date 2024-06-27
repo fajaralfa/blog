@@ -1,9 +1,9 @@
-hexo.extend.helper.register('excerpt_gen', function (content) {
+hexo.extend.helper.register('excerpt_gen', function (content, targetWordCount = 50) {
     let result = ''
     let wordCount = 0
     for (let c of content) {
         if (c === ' ') wordCount++
-        if (wordCount === 15) break
+        if (wordCount === targetWordCount) break
         result += c
     }
 
